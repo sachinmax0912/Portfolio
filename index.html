@@ -303,21 +303,110 @@
   </div>
 </section>
 
-<!-- LABS -->
+<!-- PROJECTS -->
 <section id="labs" class="py-24 px-6">
   <div class="max-w-7xl mx-auto">
 
-    <h2 class="section-title text-center">Labs & Attack Simulations</h2>
+    <h2 class="section-title text-center">Projects</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto -mt-4 mb-12">
+      Real security problems, tested and fixed before attackers found them.
+    </p>
+
+    <!-- PENETRATION TESTING ENGAGEMENTS -->
+    <h3 class="text-xl font-semibold text-green-400 mb-6">Penetration Testing Engagements</h3>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <span class="vuln-tag">Business Logic</span>
+        <h3 class="text-2xl font-bold text-white mb-4">E-commerce Checkout Security Audit</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Online stores lose money when attackers abuse the order and payment flow. I stress-tested 12 checkout, coupon, and payment endpoints with concurrent requests in Burp Suite and caught a critical race condition that allowed duplicate transactions. I delivered a working proof-of-concept and a fix using server-side locking, preventing an estimated $10,000+ in fraud losses before a single order was abused.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Burp Suite</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Race Conditions</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">OWASP Top 10</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <span class="vuln-tag">Injection</span>
+        <h3 class="text-2xl font-bold text-white mb-4">Customer Chatbot Injection Assessment</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          A chatbot that displays unsanitised user input is an open door to phishing customers. I ran 30+ crafted payloads against a clothing brand's live support chatbot, confirmed a critical HTML injection that allowed arbitrary script execution, and recommended output encoding, input validation, and a Content Security Policy. The fix passed retesting, closing a direct route to customer phishing and XSS attacks.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">HTML Injection</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">XSS</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Input Validation</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <span class="vuln-tag">Cryptographic Failure</span>
+        <h3 class="text-2xl font-bold text-white mb-4">Student Portal Authentication & Encryption Review</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          When a website holds thousands of logins, one weak encryption setting exposes every account. I reviewed a college portal's login flow with Burp Suite and Wireshark and found user credentials travelling in plain text. I flagged it before exploitation and recommended enforced TLS, salted password hashing, and secure session handling, protecting the personal data of thousands of students.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Encryption Analysis</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Wireshark</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Authentication</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <span class="vuln-tag">Web Application</span>
+        <h3 class="text-2xl font-bold text-white mb-4">OWASP Top 10 Web Application Assessments</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Businesses launching web apps rarely know which flaws attackers will exploit first. I ran structured OWASP Top 10 assessments across 5+ client applications, combining manual testing with Burp Suite and Nmap and rating every finding by severity and business impact. The engagements uncovered 20+ vulnerabilities, and every critical one was fixed, a 100% remediation rate.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">OWASP Top 10</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Nmap</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Risk Rating</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <span class="vuln-tag">Infrastructure</span>
+        <h3 class="text-2xl font-bold text-white mb-4">Internal Infrastructure Vulnerability Assessment</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Unknown exposed services and misconfigurations give attackers a path through a company's network. I scanned and enumerated internal servers and web applications with Nmap, validated results manually in Burp Suite, and ranked fixes by how easily each flaw could be exploited. That surfaced 15+ security flaws, all remediated before exploitation, protecting sensitive company data.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Nmap</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Enumeration</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Vulnerability Assessment</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <span class="vuln-tag">Reporting</span>
+        <h3 class="text-2xl font-bold text-white mb-4">Remediation-Ready Pentest Reporting</h3>
+        <p class="text-gray-300 leading-relaxed mb-6">
+          A security report is only useful if developers can act on it. I built a reporting format that gives every vulnerability a proof-of-concept, business impact, severity rating, and step-by-step fix, then walked development teams through each one. Patch turnaround improved, cutting mean time to remediate by 30%.
+        </p>
+        <div class="flex flex-wrap gap-3 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Technical Reporting</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Proof of Concept</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Remediation</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LABS & ATTACK SIMULATIONS -->
+    <h3 class="text-xl font-semibold text-green-400 mb-6">Labs & Attack Simulations</h3>
 
     <div class="grid md:grid-cols-2 gap-8">
 
       <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
         <h3 class="text-2xl font-bold text-white mb-4">DDoS Traffic Simulation & Analysis</h3>
-
         <p class="text-gray-300 leading-relaxed mb-6">
           Simulated high-volume traffic conditions in a controlled lab environment to analyse request spikes, connection saturation, and denial-of-service indicators through packet captures.
         </p>
-
         <div class="flex gap-4 text-sm">
           <span class="px-3 py-1 bg-gray-800 rounded-full">Wireshark</span>
           <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Analysis</span>
@@ -326,11 +415,9 @@
 
       <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
         <h3 class="text-2xl font-bold text-white mb-4">Command & Control Communication Simulation</h3>
-
         <p class="text-gray-300 leading-relaxed mb-6">
           Simulated periodic outbound beaconing traffic and analysed packet captures to identify suspicious communication intervals and uncommon outbound destinations.
         </p>
-
         <div class="flex gap-4 text-sm">
           <span class="px-3 py-1 bg-gray-800 rounded-full">C2 Analysis</span>
           <span class="px-3 py-1 bg-gray-800 rounded-full">Network Monitoring</span>
@@ -339,11 +426,9 @@
 
       <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
         <h3 class="text-2xl font-bold text-white mb-4">Ransomware Behaviour Study</h3>
-
         <p class="text-gray-300 leading-relaxed mb-6">
           Simulated file encryption behaviour within isolated virtual machines to analyse persistence activity, abnormal execution behaviour, and file access anomalies.
         </p>
-
         <div class="flex gap-4 text-sm">
           <span class="px-3 py-1 bg-gray-800 rounded-full">Endpoint Analysis</span>
           <span class="px-3 py-1 bg-gray-800 rounded-full">Virtual Labs</span>
@@ -352,11 +437,9 @@
 
       <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
         <h3 class="text-2xl font-bold text-white mb-4">Malicious Traffic Analysis</h3>
-
         <p class="text-gray-300 leading-relaxed mb-6">
           Analysed suspicious outbound browser-extension traffic to identify communication patterns associated with data exfiltration and remote communication behaviour.
         </p>
-
         <div class="flex gap-4 text-sm">
           <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Investigation</span>
           <span class="px-3 py-1 bg-gray-800 rounded-full">IOC Analysis</span>
@@ -366,7 +449,6 @@
     </div>
   </div>
 </section>
-
 <!-- EDUCATION -->
 <section id="education" class="py-24 px-6 bg-[#0b1120]">
   <div class="max-w-6xl mx-auto">
