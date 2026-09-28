@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Kaliraman | Penetration Tester Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050816;
+      color: #e5e7eb;
+    }
+
+    .glass {
+      background: rgba(17, 24, 39, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(75, 85, 99, 0.3);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #22c55e, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      border-color: #22c55e;
+      transform: translateY(-4px);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .vuln-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      background: rgba(34, 197, 94, 0.12);
+      color: #4ade80;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="fixed w-full top-0 z-50 bg-[#050816]/90 backdrop-blur-lg border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <h1 class="text-2xl font-bold gradient-text">Sachin Kaliraman</h1>
+
+    <ul class="hidden md:flex items-center space-x-8 text-sm text-gray-300">
+      <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+      <li><a href="#experience" class="hover:text-green-400 transition">Experience</a></li>
+      <li><a href="#findings" class="hover:text-green-400 transition">Findings</a></li>
+      <li><a href="#skills" class="hover:text-green-400 transition">Skills</a></li>
+      <li><a href="#labs" class="hover:text-green-400 transition">Labs</a></li>
+      <li><a href="#education" class="hover:text-green-400 transition">Education</a></li>
+      <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#0f172a,transparent_40%),radial-gradient(circle_at_bottom_left,#052e16,transparent_35%)]"></div>
+
+  <div class="max-w-5xl mx-auto text-center relative z-10" data-aos="fade-up">
+
+    <p class="text-green-400 text-sm font-medium tracking-wide mb-4">Penetration Tester / Offensive Security</p>
+
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      <span class="gradient-text">Break it. Report it. Fix it.</span>
+    </h1>
+
+    <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12">
+      I find the flaws in web apps that scanners miss — injection, broken encryption, race conditions — and hand developers a clear path to close them before attackers arrive.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
+      <div>
+        <p class="stat-number">20+</p>
+        <p class="text-gray-400 text-sm mt-1">vulnerabilities uncovered</p>
+      </div>
+      <div>
+        <p class="stat-number">5+</p>
+        <p class="text-gray-400 text-sm mt-1">client web apps tested</p>
+      </div>
+      <div>
+        <p class="stat-number">100%</p>
+        <p class="text-gray-400 text-sm mt-1">fix rate on critical findings</p>
+      </div>
+      <div>
+        <p class="stat-number">$10K+</p>
+        <p class="text-gray-400 text-sm mt-1">est. breach costs prevented</p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="Sachin Kaliraman Resume.pdf" download class="px-6 py-3 bg-green-500 hover:bg-green-400 text-black rounded-lg font-semibold transition">
+        Download Resume
+      </a>
+
+      <a href="https://github.com/sachin675-prog" target="_blank" class="px-6 py-3 border border-gray-700 hover:border-green-400 rounded-lg transition">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/sachin-kaliraman-855236333/" target="_blank" class="px-6 py-3 border border-gray-700 hover:border-green-400 rounded-lg transition">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto" data-aos="fade-up">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="glass rounded-2xl p-8 md:p-10 leading-relaxed text-gray-300 text-lg">
+      <p class="mb-6">
+        Offensive security specialist with hands-on penetration testing experience across web applications, e-commerce platforms, and enterprise systems. I test the way real attackers do — manual testing first, tooling second, always guided by OWASP methodology.
+      </p>
+
+      <p class="mb-6">
+        My findings include injection flaws, broken encryption, and business-logic race conditions, discovered through Burp Suite, Nmap, Metasploit, and creative attack-vector research backed by Python scripting.
+      </p>
+
+      <p>
+        Because I have also worked on the defender's side — triaging alerts, tracing attack vectors through logs and network traffic — my reports don't just show what is broken. They show how it would be detected, and exactly how to fix it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Experience</h2>
+
+    <div class="space-y-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-white">Penetration Tester</h3>
+            <p class="text-green-400 mt-1">Freelance / Self-Employed</p>
+          </div>
+
+          <span class="text-gray-400 mt-3 md:mt-0">2025 – Present</span>
+        </div>
+
+        <ul class="space-y-4 text-gray-300 leading-relaxed">
+          <li>• Performed penetration testing and security audits for 5+ client web applications, applying manual and automated testing (Burp Suite, OWASP methodology) to uncover 20+ vulnerabilities — including HTML injection, encryption flaws, and race conditions — helping clients prevent potential data breaches</li>
+          <li>• Audited e-commerce and educational platforms for business-logic flaws, applying race-condition and authentication-flow analysis to catch critical issues pre-disclosure, saving clients an estimated $10,000+ in potential breach and downtime costs</li>
+          <li>• Delivered detailed proof-of-concept and remediation reports directly to development teams, driving a 100% fix rate on all reported critical vulnerabilities and strengthening client trust</li>
+          <li>• Researched emerging attack vectors such as encryption weaknesses and injection techniques, applying cryptography analysis and Python scripting to validate exploits and improve the security posture of 3+ client organizations</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-white">Cybersecurity Analyst</h3>
+            <p class="text-green-400 mt-1">M Cyber Academy</p>
+          </div>
+
+          <span class="text-gray-400 mt-3 md:mt-0">June 2025 - December 2025</span>
+        </div>
+
+        <ul class="space-y-4 text-gray-300 leading-relaxed">
+          <li>• Conducted vulnerability assessments on internal web applications and infrastructure using Burp Suite, Nmap, and OWASP Top 10 methodology, identifying 15+ security flaws that were remediated before they could be exploited</li>
+          <li>• Investigated security incidents by analysing network traffic and system logs to trace attack vectors, building practical, hands-on knowledge of real-world exploitation and detection-evasion techniques</li>
+          <li>• Documented technical findings and authored remediation reports for cross-functional teams, cutting mean-time-to-remediate by 30%</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINDINGS -->
+<section id="findings" class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Notable Findings</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <span class="vuln-tag">Business Logic</span>
+        <h3 class="text-xl font-bold text-white mb-3">Race Condition in Checkout Flow</h3>
+        <p class="text-gray-400 text-sm mb-4">E-commerce platform — security audit</p>
+        <p class="text-gray-300 leading-relaxed">
+          Uncovered a race condition that could have enabled fraudulent, duplicate transactions. Reported it before exploitation, safeguarding platform revenue and customer trust.
+        </p>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <span class="vuln-tag">Injection</span>
+        <h3 class="text-xl font-bold text-white mb-3">HTML Injection in Live Chatbot</h3>
+        <p class="text-gray-400 text-sm mb-4">Clothing brand — customer-service chatbot</p>
+        <p class="text-gray-300 leading-relaxed">
+          Discovered a critical HTML injection flaw enabling arbitrary script execution. Reported it responsibly, preventing potential phishing and XSS attacks on customers.
+        </p>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+        <span class="vuln-tag">Cryptographic Failure</span>
+        <h3 class="text-xl font-bold text-white mb-3">Plaintext Credential Exposure</h3>
+        <p class="text-gray-400 text-sm mb-4">College website — authentication system</p>
+        <p class="text-gray-300 leading-relaxed">
+          Identified an encryption flaw that exposed user credentials in plain text. Flagged it pre-exploitation, protecting the personal data of thousands of students.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-white mb-6">Offensive Security</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Penetration Testing</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Vulnerability Assessment</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Web Application Security</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">OWASP Top 10</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Reconnaissance</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Exploit Validation</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-white mb-6">Attack Techniques</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Injection Testing (XSS / HTML)</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Race Condition Testing</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Cryptography & Encryption Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Authentication Flow Analysis</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Business Logic Testing</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Network Traffic Analysis</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-white mb-6">Tools & Platforms</h3>
+
+        <div class="flex flex-wrap gap-3">
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Burp Suite</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Nmap</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Metasploit</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Kali Linux</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Wireshark</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Python Scripting</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">Splunk</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">VMware</span>
+          <span class="px-4 py-2 bg-gray-800 rounded-lg">VirtualBox</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LABS -->
+<section id="labs" class="py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="section-title text-center">Labs & Attack Simulations</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">DDoS Traffic Simulation & Analysis</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated high-volume traffic conditions in a controlled lab environment to analyse request spikes, connection saturation, and denial-of-service indicators through packet captures.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Wireshark</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Analysis</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Command & Control Communication Simulation</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated periodic outbound beaconing traffic and analysed packet captures to identify suspicious communication intervals and uncommon outbound destinations.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">C2 Analysis</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Network Monitoring</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">Ransomware Behaviour Study</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Simulated file encryption behaviour within isolated virtual machines to analyse persistence activity, abnormal execution behaviour, and file access anomalies.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Endpoint Analysis</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Virtual Labs</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Malicious Traffic Analysis</h3>
+
+        <p class="text-gray-300 leading-relaxed mb-6">
+          Analysed suspicious outbound browser-extension traffic to identify communication patterns associated with data exfiltration and remote communication behaviour.
+        </p>
+
+        <div class="flex gap-4 text-sm">
+          <span class="px-3 py-1 bg-gray-800 rounded-full">Traffic Investigation</span>
+          <span class="px-3 py-1 bg-gray-800 rounded-full">IOC Analysis</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-24 px-6 bg-[#0b1120]">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="section-title text-center">Education & Certifications</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-white mb-4">Education</h3>
+
+        <p class="text-green-400 mb-1">
+          Certified Cybersecurity Training
+        </p>
+        <p class="text-gray-400 mb-6">
+          Mcyber Academy | September 2024 – December 2025
+        </p>
+
+        <p class="text-green-400 mb-1">
+          Bachelor of Commerce (B.Com)
+        </p>
+        <p class="text-gray-400 mb-6">
+          Maharshi Dayanand University | July 2023 – July 2026
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+          Focused on ethical hacking, web application testing, and hands-on security lab environments alongside academic coursework.
+        </p>
+      </div>
+
+      <div class="glass rounded-2xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-bold text-white mb-4">Certifications</h3>
+
+        <ul class="space-y-3 text-gray-300 leading-relaxed">
+          <li>• Google – Sound the Alarm: Detection and Response</li>
+          <li>• One Year Diploma in Cyber Security – M Cyber Academy</li>
+          <li>• Ethical Hacking Training</li>
+          <li>• Linux Administration</li>
+          <li>• Python & Black Hat Python</li>
+          <li>• WAPT & APT</li>
+          <li>• IoT Security & Digital Forensics</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p class="text-gray-300 text-lg leading-relaxed mb-10">
+      Open to penetration testing, offensive security, vulnerability assessment, and application security opportunities.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
+        <p class="text-gray-300 break-all">singhsachin15147@gmail.com</p>
+      </div>
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/sachin-kaliraman-855236333/" target="_blank" class="text-green-400 hover:underline">
+          View Profile
+        </a>
+      </div>
+
+      <div class="glass rounded-2xl p-6 card-hover">
+        <h3 class="text-lg font-semibold text-white mb-2">GitHub</h3>
+        <a href="https://github.com/sachin675-prog" target="_blank" class="text-green-400 hover:underline">
+          View Repositories
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+  © 2026 Sachin Kaliraman. All Rights Reserved.
+</footer>
+
+<script>
+  AOS.init({
+    duration: 700,
+    once: true,
+  });
+</script>
+
+</body>
+</html>
